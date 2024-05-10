@@ -31,7 +31,7 @@ namespace CharityJamLights.Controllers
         [HttpPost]
         public async Task<IActionResult> Test()
         {
-            await _lightEngine.Send();
+            await _lightEngine.Send(1, 100);
             return RedirectToAction(nameof(Index));
         }
     }
